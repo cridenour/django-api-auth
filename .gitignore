@@ -1,3 +1,4 @@
 *.pyc
 django_api_auth.egg-info/
 dist/
+build/
