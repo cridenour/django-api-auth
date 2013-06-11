@@ -1,5 +1,5 @@
 from django.contrib import admin
-from api.models import APIToken
+from api_auth.models import APIToken
 
 
 class TokenAdmin(admin.ModelAdmin):

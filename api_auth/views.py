@@ -3,9 +3,9 @@ from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import HttpResponse
 from django.views.generic import View
 
-from api import AccessDenied, ServiceUnavailable, PageNotFound
-from api.models import APIToken
-from api import settings
+from api_auth import AccessDenied, ServiceUnavailable, PageNotFound
+from api_auth.models import APIToken
+from api_auth import settings
 
 import logging
 import json

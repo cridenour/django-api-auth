@@ -7,7 +7,7 @@ import uuid
 import hmac
 from hashlib import sha1
 
-from api import settings
+from api_auth import settings
 
 class ValidTokenManager(models.Manager):
     def get_query_set(self):

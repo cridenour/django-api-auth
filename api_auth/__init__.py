@@ -1,3 +1,3 @@
 __author__='Chris Ridenour'
 
-from api.exceptions import *
+from api_auth.exceptions import *
