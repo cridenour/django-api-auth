@@ -73,4 +73,4 @@ class Migration(SchemaMigration):
         }
     }
 
-    complete_apps = ['api']
+    complete_apps = ['api_auth']
