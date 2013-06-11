@@ -9,7 +9,7 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         # Adding model 'APIToken'
-        db.create_table(u'api_apitoken', (
+        db.create_table(u'api_auth_apitoken', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('created', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
             ('user', self.gf('django.db.models.fields.related.OneToOneField')(related_name='token', unique=True, to=orm['auth.User'])),
@@ -17,16 +17,16 @@ class Migration(SchemaMigration):
             ('updated', self.gf('django.db.models.fields.DateTimeField')(auto_now=True, blank=True)),
             ('expires', self.gf('django.db.models.fields.DateTimeField')(default=None, null=True, blank=True)),
         ))
-        db.send_create_signal(u'api', ['APIToken'])
+        db.send_create_signal(u'api_auth', ['APIToken'])
 
 
     def backwards(self, orm):
         # Deleting model 'APIToken'
-        db.delete_table(u'api_apitoken')
+        db.delete_table(u'api_auth_apitoken')
 
 
     models = {
-        u'api.apitoken': {
+        u'api_auth.apitoken': {
             'Meta': {'object_name': 'APIToken'},
             'created': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
             'expires': ('django.db.models.fields.DateTimeField', [], {'default': 'None', 'null': 'True', 'blank': 'True'}),
